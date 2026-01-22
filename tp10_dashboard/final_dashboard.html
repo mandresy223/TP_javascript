@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Étudiants</title>
+</head>
+<body>
+
+  <h1>Dashboard Étudiants</h1>
+
+  <!-- Recherche -->
+  <input id="search" type="text" placeholder="Rechercher par nom">
+
+  <!-- Filtre -->
+  <select id="filter">
+    <option value="ALL">Tous les parcours</option>
+    <option value="IAD">IAD</option>
+    <option value="ARS">ARS</option>
+    <option value="GLBD">GLBD</option>
+  </select>
+
+  <!-- Tri -->
+  <button id="sort-name">Trier par nom</button>
+  <button id="sort-avg">Trier par moyenne</button>
+
+  <!-- Tableau -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Parcours</th>
+        <th>Moyenne</th>
+      </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <!-- Bonus -->
+  <button id="export">Exporter CSV</button>
+
+  <script src="final_dashboard.js"></script>
+</body>
+</html>
