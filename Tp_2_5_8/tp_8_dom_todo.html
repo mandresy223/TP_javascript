@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP8 - ToDo List (DOM & Events)</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+
+      /* Zone d'ajout */
+      .input-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      #tacheInput {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        cursor: pointer;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        color: white;
+      }
+      #btnAjouter {
+        background-color: #28a745;
+      }
+
+      /* Filtres */
+      .filters {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .filter-btn {
+        background-color: #007bff;
+      }
+      .filter-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* La Liste */
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        background: white;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Classes dynamiques */
+      .termine {
+        text-decoration: line-through;
+        color: gray;
+        background-color: #e9e9e9;
+      }
+
+      /* Boutons d'action dans la liste */
+      .actions button {
+        margin-left: 5px;
+        font-size: 0.8em;
+      }
+      .btn-check {
+        background-color: #17a2b8;
+      }
+      .btn-delete {
+        background-color: #dc3545;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ma ToDo List (L1)</h1>
+
+    <!-- Ajout de tâche -->
+    <div class="input-group">
+      <input type="text" id="tacheInput" placeholder="Nouvelle tâche..." />
+      <button id="btnAjouter">Ajouter</button>
+    </div>
+
+    <!-- Filtres -->
+    <div class="filters">
+      <button class="filter-btn" data-filter="all">Toutes</button>
+      <button class="filter-btn" data-filter="todo">À faire</button>
+      <button class="filter-btn" data-filter="done">Terminées</button>
+    </div>
+
+    <!-- Liste vide au départ -->
+    <ul id="listeTaches">
+      <!-- Les <li> seront ajoutés ici par le JS -->
+    </ul>
+
+    <script src="tp8_dom_todo.js"></script>
+  </body>
+</html>
